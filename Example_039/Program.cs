@@ -29,9 +29,11 @@ void Remake(int[] arr)
     int temp = 0;
     for (int i=0;i<arr.Length/2;i++)
     {
-        temp = arr[i];
-        arr[i] = arr[arr.Length-1-i];
-        arr[arr.Length-1-i] = temp;
+        // temp = arr[i];
+        // arr[i] = arr[arr.Length-1-i];
+        // arr[arr.Length-1-i] = temp;
+
+        (arr[i],arr[arr.Length-1-i]) = (arr[arr.Length-1-i],arr[i]);
     }
 }
 
